@@ -7,8 +7,8 @@
 20 歯のピニオンギヤで駆動する 2 MW 風力タービン高速シャフトから収集されたデータを使用します[1]。まず、[https://github.com/mathworks/WindTurbineHighSpeedBearingPrognosis-Data](https://github.com/mathworks/WindTurbineHighSpeedBearingPrognosis-Data) からリポジトリ全体を zip ファイルとしてダウンロードして、本スクリプトと同じディレクトリに保存してください。以下のコマンドを使用してファイルを解凍します。こちらのデータでは計測間隔は 1 日間隔です。
 
 ```matlab:Code
-if exist('WindTurbineHighSpeedBearingPrognosis-Data-master.zip', 'file')
-    unzip('WindTurbineHighSpeedBearingPrognosis-Data-master.zip')
+if exist('WindTurbineHighSpeedBearingPrognosis-Data-main.zip', 'file')
+    unzip('WindTurbineHighSpeedBearingPrognosis-Data-main.zip')
 end
 ```
 
@@ -17,7 +17,7 @@ end
 まず風力タービンデータに対して fileDatastore を作成します。使用するデータには振動とタコメータの信号が含まれています。各 mat ファイルからcutomreader 関数で読み取りますが、1 秒分の振動データに加えてファイル名から日付情報も合わせて取得します。
 
 ```matlab:Code
-dir = 'WindTurbineHighSpeedBearingPrognosis-Data-master';
+dir = 'WindTurbineHighSpeedBearingPrognosis-Data-main';
 ds = fileDatastore(fullfile('.', dir,'*.mat'),'ReadFcn',@customreader,'UniformRead',true);
 data = readall(ds)
 ```
@@ -34,6 +34,10 @@ data = readall(ds)
 |8|2013/03/14|97656x1 timetable|
 |9|2013/03/15|97656x1 timetable|
 |10|2013/03/16|97656x1 timetable|
+|11|2013/03/17|97656x1 timetable|
+|12|2013/03/17|97656x1 timetable|
+|13|2013/03/18|97656x1 timetable|
+|14|2013/03/20|97656x1 timetable|
 
 # Data Reduction
 
@@ -80,11 +84,11 @@ vib = mfile.vibration;
 
 % Extract the first 1s of signal and convert it to timetable
 fs = 97656; % Sampling rate
-tVibration = timetable(vib(1:fs),'SamplingRate',fs);
+tVibration = timetable(vib(1:fs),'SampleRate',fs);
 data.vibration = {tVibration};
 
 end
 
 ```
 
-*Copyright 2018 The MathWorks, Inc.*
+*Copyright 2018-2022 The MathWorks, Inc.*

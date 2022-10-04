@@ -1,8 +1,10 @@
 # DEMO: アプリを使用した特徴量調査
 
-このプログラムでは、デモに使用するデータファイル sampleData.mat を作成します。もともとの1 日当たり 6 秒間の振動信号を連続 50 日間取得したものですが、ここでは計算量軽減のため、1 日当たり 1 秒間、1 日おき 25 日分のデータに削減します。
+MATLAB/Simulink による予知保全ビデオシリーズの「[Part 3:予知保全を可能にする特徴量選択](https://jp.mathworks.com/videos/part-3-feature-extraction-for-predictive-maintenance-1545052389165.html)」では Diagnostic Feature Explorer アプリ ([https://jp.mathworks.com/matlabcentral/fileexchange/69101-diagnostic-feature-explorer](https://jp.mathworks.com/matlabcentral/fileexchange/69101-diagnostic-feature-explorer)) を使用して特徴量を抽出するデモを紹介しています。その際に使用するサンプルデータを作成するスクリプトです。アプリの使用には Predictive Maintenance Toolbox が必要ですが、このスクリプト自体は MATLAB だけで実行することができます。
 
 # Dataset
+
+もともとの1 日当たり 6 秒間の振動信号を連続 50 日間取得したものですが、ここでは計算量軽減のため、1 日当たり 1 秒間、1 日おき 25 日分のデータに削減します。
 
 20 歯のピニオンギヤで駆動する 2 MW 風力タービン高速シャフトから収集されたデータを使用します[1]。まず、[https://github.com/mathworks/WindTurbineHighSpeedBearingPrognosis-Data](https://github.com/mathworks/WindTurbineHighSpeedBearingPrognosis-Data) からリポジトリ全体を zip ファイルとしてダウンロードして、本スクリプトと同じディレクトリに保存してください。以下のコマンドを使用してファイルを解凍します。こちらのデータでは計測間隔は 1 日間隔です。
 

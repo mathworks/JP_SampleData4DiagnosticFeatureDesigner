@@ -61,7 +61,8 @@ save('sampleData.mat','sampleData');
 
 # References
 
-[1] [<http://data-acoustics.com/measurements/bearing-faults/bearing-3/](http://data-acoustics.com/measurements/bearing-faults/bearing-3/)> Bechhoefer, Eric, Brandon Van Hecke, and David He. "Processing for improved spectral analysis." *Annual Conference of the Prognostics and Health Management Society, New Orleans, LA, Oct*. 2013.
+
+[1] Bechhoefer, Eric, Brandon Van Hecke, and David He. 2013. “Processing for Improved Spectral Analysis”. Annual Conference of the PHM Society 5 (1). https://doi.org/10.36001/phmconf.2013.v5i1.2220.
 
 # Helper Function
 

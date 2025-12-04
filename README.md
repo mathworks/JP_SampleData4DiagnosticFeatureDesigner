@@ -1,6 +1,6 @@
 # DEMO: アプリを使用した特徴量調査
 
-MATLAB/Simulink による予知保全ビデオシリーズの「[Part 3:予知保全を可能にする特徴量選択](https://jp.mathworks.com/videos/part-3-feature-extraction-for-predictive-maintenance-1545052389165.html)」では [Diagnostic Feature Designer アプリ](nt/ref/diagnosticfeaturedesigner-app.html) を使用して特徴量を抽出するデモを紹介しています。その際に使用するサンプルデータを作成するスクリプトです。アプリの使用には Predictive Maintenance Toolbox が必要ですが、このスクリプト自体は MATLAB だけで実行することができます。
+MATLAB/Simulink による予知保全ビデオシリーズの「[Part 3:予知保全を可能にする特徴量選択](https://jp.mathworks.com/videos/part-3-feature-extraction-for-predictive-maintenance-1545052389165.html)」では [Diagnostic Feature Designer アプリ](https://jp.mathworks.com/help/predmaint/ref/diagnosticfeaturedesigner-app.html) を使用して特徴量を抽出するデモを紹介しています。その際に使用するサンプルデータを作成するスクリプトです。アプリの使用には Predictive Maintenance Toolbox が必要ですが、このスクリプト自体は MATLAB だけで実行することができます。
 
 # Dataset
 
@@ -95,5 +95,6 @@ end
 ```
 
 *Copyright 2018-2022 The MathWorks, Inc.*
+
 
 
